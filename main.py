@@ -1,8 +1,6 @@
 def compute_tax(status, income):
-    # Tax brackets for 2009
-    # Each entry: (upper_limit, tax_rate)
     brackets = {
-        0: [  # Single
+        0: [  
             (8350, 0.10),
             +
             (33950, 0.15),
@@ -11,7 +9,7 @@ def compute_tax(status, income):
             (372950, 0.33),
             (float('inf'), 0.35)
         ],
-        1: [  # Married Filing Jointly or Qualifying Widow(er)
+        1: [  
             (16700, 0.10),
             (67900, 0.15),
             (137050, 0.25),
@@ -19,7 +17,7 @@ def compute_tax(status, income):
             (372950, 0.33),
             (float('inf'), 0.35)
         ],
-        2: [  # Married Filing Separately
+        2: [  
             (8350, 0.10),
             (33950, 0.15),
             (68525, 0.25),
@@ -27,7 +25,7 @@ def compute_tax(status, income):
             (186475, 0.33),
             (float('inf'), 0.35)
         ],
-        3: [  # Head of Household
+        3: [  
             (11950, 0.10),
             (45500, 0.15),
             (117450, 0.25),
@@ -50,8 +48,6 @@ def compute_tax(status, income):
 
     return tax
 
-
-# ---- Main Program ----
 print("Filing Status:")
 print("0 - Single")
 print("1 - Married Filing Jointly or Qualifying Widow(er)")
@@ -64,3 +60,4 @@ income = float(input("Enter the taxable income: "))
 tax = compute_tax(status, income)
 
 print(f"Total tax owed: ${tax:.2f}")
+
